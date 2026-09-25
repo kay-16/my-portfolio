@@ -11,8 +11,8 @@ export function Navbar() {
 
         {/* Links */}
         <div className="flex items-center gap-6 text-sm text-neutral-600 dark:text-neutral-400">
-          <Link href="#projects" className="hover:text-black dark:hover:text-white transition">Projects</Link>
-          <Link href="#about" className="hover:text-black dark:hover:text-white transition">About</Link>
+          <Link href="/projects" className="hover:text-black dark:hover:text-white transition">Projects</Link>
+          <Link href="/about" className="hover:text-black dark:hover:text-white transition">About</Link>
           <Link href="/resume.pdf" download className="hover:text-black dark:hover:text-white transition">Resume</Link>
           
           {/* Action icon */}

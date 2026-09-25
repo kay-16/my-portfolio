@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Globe from './components/Globe'
 
 export const metadata = {
   title: 'Kyla Reambonanza | Software Engineer',
@@ -7,7 +8,7 @@ export const metadata = {
 
 const aboutme = [
   {
-    
+
   }
 ]
 
@@ -37,6 +38,25 @@ const projects = [
     link: '#',
   },
 ]
+
+const stacks = [
+  'Next.js',
+  'React',
+  'Python',
+  'Tailwind CSS',
+  'Laravel',
+  'TypeScript',
+  'PyTorch',
+  'Git',
+  'MySQL',
+]
+
+const socials = [
+  { name: 'GitHub', url: 'https://github.com/your-username' },
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/your-profile' },
+  { name: 'Email', url: 'mailto:your-email@example.com' },
+]
+
 
 export default function Page() {
   return (
@@ -129,6 +149,110 @@ export default function Page() {
               <span>See all my projects</span>
               <span className="font-mono text-xs">→</span>
             </Link>
+          </div>
+        </section>
+
+
+      {/* About Me Bento Grid */}
+        <section id="about" className="scroll-mt-28">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center tracking-tight text-neutral-950 dark:text-neutral-50 mb-10, my-20">
+            About Me
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {/* 1. Location Card with Globe */}
+            <div className="md:col-span-2 relative overflow-hidden rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900/40 p-6 flex flex-col justify-between shadow-sm min-h-[340px]">
+              <div className="flex items-center gap-2 text-xs font-medium text-neutral-500">
+                <span>📍</span>
+                <span>Location</span>
+              </div>
+
+              <div className="relative flex items-center justify-center my-auto">
+                <Globe />
+                <div className="absolute px-3 py-1 rounded-full bg-black text-white text-xs font-semibold shadow-md flex items-center gap-1.5 z-10 pointer-events-none">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  Philippines
+                </div>
+              </div>
+            </div>
+
+            {/* 2. Connect Links */}
+            <div className="md:col-span-1 lg:col-span-2 rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900/40 p-6 shadow-sm flex flex-col justify-between">
+              <div className="flex items-center gap-2 text-xs font-medium text-neutral-500 mb-4">
+                <span>🔗</span>
+                <span>Connect</span>
+              </div>
+
+              <div className="flex flex-col gap-2 my-auto">
+                {socials.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-3 rounded-2xl hover:bg-neutral-100 dark:hover:bg-neutral-800 transition text-sm font-medium text-neutral-800 dark:text-neutral-200"
+                  >
+                    <span>{social.name}</span>
+                    <span className="text-xs text-neutral-400">↗</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* 3. Tech Stacks */}
+            <div className="md:col-span-2 rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900/40 p-6 shadow-sm flex flex-col justify-between">
+              <div className="flex items-center gap-2 text-xs font-medium text-neutral-500 mb-6">
+                <span>⚡</span>
+                <span>Stacks</span>
+              </div>
+
+              <div className="flex flex-wrap gap-2.5 items-center justify-center py-4">
+                {stacks.map((stack) => (
+                  <span
+                    key={stack}
+                    className="px-3.5 py-1.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-xs font-mono font-medium text-neutral-700 dark:text-neutral-300 shadow-sm"
+                  >
+                    {stack}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* 4. Focus Area
+            <div className="rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900/40 p-6 shadow-sm flex flex-col justify-between min-h-[160px]">
+              <div className="flex items-center gap-2 text-xs font-medium text-neutral-500">
+                <span>⏱️</span>
+                <span>Focus</span>
+              </div>
+              <div className="my-auto">
+                <span className="text-2xl font-extrabold tracking-tight text-neutral-950 dark:text-neutral-50">
+                  Full Stack & ML
+                </span>
+              </div>
+            </div> */}
+
+            {/* 5. Fav Framework
+            <div className="rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900/40 p-6 shadow-sm flex flex-col justify-between min-h-[160px]">
+              <div className="flex items-center gap-2 text-xs font-medium text-neutral-500">
+                <span>❤️</span>
+                <span>Fav Framework</span>
+              </div>
+              <div className="flex items-center justify-center my-auto">
+                <div className="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center text-xl font-bold shadow-md">
+                  N
+                </div>
+              </div>
+            </div> */}
+          </div>
+
+          <div className="mt-10 flex justify-center">
+            <a
+              href="/resume.pdf"
+              download
+              className="px-6 py-2.5 rounded-full text-xs font-medium border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition shadow-sm"
+            >
+              Download Full CV
+            </a>
           </div>
         </section>
       </div>
