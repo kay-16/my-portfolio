@@ -57,9 +57,9 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <section id="projects" className="pt-6">
+    <section id="projects" className="pt-32">
           <h2 className="text-2xl sm:text-3xl font-bold text-center tracking-tight text-neutral-950 dark:text-neutral-100 mb-10">
-            Some of my projects
+            My works
           </h2>
 
           {/* Projects Grid */}
