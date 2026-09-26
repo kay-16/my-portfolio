@@ -64,14 +64,34 @@ export default async function ProjectPostPage({ params }: PageProps) {
           </p>
 
           <div className="flex flex-wrap gap-3 mt-6">
+            {project.doiUrl && (
+              <a
+                href={project.doiUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-medium border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
+              >
+                <span>view paper</span>
+                <img 
+                  src="/external-link.svg" 
+                  alt="" 
+                  className="w-3.5 h-3.5 opacity-100"
+                />
+              </a>
+            )}
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 rounded-xl text-xs font-medium border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-medium border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
               >
-                GitHub Repository ↗
+                <span>view in Github</span>
+                <img 
+                  src="/external-link.svg" 
+                  alt="" 
+                  className="w-3.5 h-3.5 opacity-100"
+                />
               </a>
             )}
             {project.liveUrl && (
@@ -88,9 +108,35 @@ export default async function ProjectPostPage({ params }: PageProps) {
         </header>
 
         {/* Media Preview / Thumbnail Area */}
-        <div className="w-full h-64 sm:h-80 rounded-3xl bg-neutral-950 flex items-center justify-center text-neutral-500 mb-12 border border-neutral-800">
-          <span className="text-sm font-mono">[ Visual / Architecture Diagram ]</span>
-        </div>
+        {/* Dynamic Project Images */}
+        {project.image && project.image.length > 0 && (
+          <figure className="mb-12">
+            <div
+              className={`grid gap-4 ${
+                project.image.length > 1 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1'
+              }`}
+            >
+              {project.image.map((imgSrc, index) => (
+                <div
+                  key={index}
+                  className="overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800 shadow-sm bg-neutral-100 dark:bg-neutral-900"
+                >
+                  <img
+                    src={imgSrc}
+                    alt={`${project.title} screenshot ${index + 1}`}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+
+            {project.imageCaption && (
+              <figcaption className="mt-3 text-center text-xs text-neutral-500 dark:text-neutral-400">
+                {project.imageCaption}
+              </figcaption>
+            )}
+          </figure>
+        )}
 
           {/* CARD INFO SECTION FOR TABLE OF CONTENTS */}
           {/* Section 1: Overview */}
