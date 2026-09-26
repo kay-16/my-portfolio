@@ -1,43 +1,12 @@
 import Link from 'next/link'
 import Globe from './components/Globe'
+import { allProjects } from 'lib/projects'
 
 export const metadata = {
   title: 'Kyla Reambonanza | Software Engineer',
   description: 'Software Engineer and Computer Science graduate portfolio',
 }
 
-const aboutme = [
-  {
-
-  }
-]
-
-
-const projects = [
-  {
-    tag: 'Project',
-    title: 'Real-Time Visual Clutter & Risk Assessment of Electrical Posts Using Deep Learning V2',
-    description: 'an updated version of the project I made for our Deep Learning subject back in uni. An end-to-end segmentation that addresses false positives issues using YOLO instance segmentation',
-    icon: (
-      <svg className="w-10 h-10 text-neutral-400 stroke-current fill-none" viewBox="0 0 24 24" strokeWidth="1.5">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.864-9.864a4.5 4.5 0 00-6.364 0l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
-      </svg>
-    ),
-    link: '#',
-  },
-  {
-    tag: 'Project',
-    title: 'Full-Stack Web App',
-    description: 'Dynamic web application with custom authentication, responsive UI, and REST APIs.',
-    icon: (
-      <svg className="w-10 h-10 text-neutral-400 stroke-current fill-none" viewBox="0 0 24 24" strokeWidth="1.5">
-        <rect x="5" y="2" width="14" height="20" rx="3" strokeLinecap="round" strokeLinejoin="round" />
-        <line x1="10" y1="18" x2="14" y2="18" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-    link: '#',
-  },
-]
 
 const stacks = [
   'Next.js',
@@ -104,10 +73,10 @@ export default function Page() {
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {projects.map((project) => (
+            {allProjects.slice(0, 2).map((project) => (
               <Link
-                key={project.title}
-                href={project.link}
+                key={project.slug}
+                href={`/projects/${project.slug}`}
                 className="group flex flex-col rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900/40 p-6 shadow-[0_2px_16px_rgba(0,0,0,0.04)] hover:shadow-xl hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-300 cursor-pointer"
               >
                 {/* Card Tag */}
@@ -118,7 +87,9 @@ export default function Page() {
 
                 {/* Black Thumbnail Box */}
                 <div className="flex h-52 w-full items-center justify-center rounded-2xl bg-black transition-transform duration-300 group-hover:scale-[1.01]">
-                  {project.icon}
+                  <span className="font-mono text-neutral-500 text-xs">
+                    [ View Case Study ]
+                  </span>
                 </div>
 
                 {/* Card Text Content */}
@@ -127,7 +98,6 @@ export default function Page() {
                     <h3 className="text-xl font-bold text-neutral-950 dark:text-neutral-100 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">
                       {project.title}
                     </h3>
-                    {/* Subtle arrow indicator that moves on hover */}
                     <span className="text-neutral-400 group-hover:translate-x-1 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-all">
                       ↗
                     </span>
