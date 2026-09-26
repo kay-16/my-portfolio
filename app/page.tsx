@@ -24,8 +24,8 @@ const socials = [
   { name: 'GitHub', url: 'https://github.com/kay-16' },
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/kyla-reambonanza-889a7135b/' },
   { name: 'Email', url: 'mailto:kayreambonanza@gmail.com' },
-  { name: 'Spotify', url: 'mailto:kayreambonanza@gmail.com' },
-  { name: 'Instagram', url: 'mailto:kayreambonanza@gmail.com' },
+  { name: 'Spotify', url: 'https://open.spotify.com/user/ajq0gc3yb2piriihvzldi3nip?si=2111d493490248c0d' },
+  { name: 'Instagram', url: 'https://www.instagram.com/kayluvxx_/' },
 ]
 
 export default function Page() {
