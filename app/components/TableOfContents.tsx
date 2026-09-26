@@ -27,7 +27,23 @@ export default function TableOfContents({ sections }: { sections: SectionItem[] 
       if (element) observer.observe(element)
     })
 
-    return () => observer.disconnect()
+    // Bottom Scroll: checks and highlights the last section if scrolled to the end of page 
+    const handleScrollBottom = () => {
+      const isAtBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 60
+
+      if (isAtBottom && sections.length > 0) {
+        setActiveId(sections[sections.length - 1].id)
+      }
+    }
+
+    window.addEventListener('scroll', handleScrollBottom, { passive: true })
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('scroll', handleScrollBottom)
+    }
   }, [sections])
 
   return (
