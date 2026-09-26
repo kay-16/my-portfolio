@@ -19,7 +19,7 @@ export default function AboutPage() {
       {/* Scroll Reading Progress Bar (Top) */}
       <ProgressBar />
 
-      {/* 2-Column Responsive Layout: Left is Content, Right is Sticky TOC */}
+      {/* 2-column layout: Left is Content, Right is Sticky Table of Contents */}
       <div className="pt-32 pb-24 max-w-5xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1fr_200px] gap-12 text-neutral-900 dark:text-neutral-100">
         
         {/* Main Content Column */}
