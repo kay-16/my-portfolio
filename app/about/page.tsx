@@ -36,12 +36,13 @@ export default function AboutPage() {
           {/* Bio */}
           <section id="bio" className="scroll-mt-32 space-y-4 text-neutral-700 dark:text-neutral-300 leading-relaxed text-base mb-12">
             <p>
-              Hi, I’m Kyla! I graduated with a degree in Computer Science, focusing on full-stack web
-              engineering and applied machine learning.
+              Hi! I’m Kyla (or Kay for short). I recently graduated with a degree in Computer Science. And now I've been focusing on machine learning, 
+              deep learning, and dabbling in full-stack development and research on the side. Also, been getting into UI/UX design because I get to express my
+              love for art here. 
             </p>
             <p>
-              My work spans building end-to-end applications with modern frontend frameworks and
-              scalable backend APIs, as well as researching signal processing and computer vision systems.
+              My work spans building end-to-end applications with modern frontend frameworks as well as researching niche subjects where I can 
+              apply computer vision systems and solve problems—even the most trivial (for a lack of better word xd) inconvenience I encounter on the daily.
             </p>
           </section>
 
@@ -56,6 +57,9 @@ export default function AboutPage() {
                 <p className="text-sm text-neutral-500">
                   Mindanao State University – Iligan Institute of Technology (MSU-IIT)
                 </p>
+                <p className="text-sm text-neutral-500">
+                  <i>Cum Laude</i>
+                </p>
               </div>
             </div>
           </section>
@@ -65,16 +69,17 @@ export default function AboutPage() {
             <h2 className="text-xl font-bold mb-6 tracking-tight">Focus & Research</h2>
             <div className="space-y-6">
               <div className="rounded-2xl border border-neutral-200/80 dark:border-neutral-800 p-5 bg-neutral-50/50 dark:bg-neutral-900/40">
-                <h3 className="font-semibold text-base">Machine Learning & Acoustic Signal Processing</h3>
+                <h3 className="font-semibold text-base">Deep Learning & Machine Learning</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2 leading-relaxed">
-                  Researched and built automated detection pipelines utilizing Log-Mel Spectrograms and Convolutional Neural Networks (CNNs) paired with microcontroller telemetry.
+                  implemented an end-to-end segmentation pipeline using <i>instance segmentation</i>; 
+                  researched and built automated detection pipelines utilizing log-mel spectrograms and <i>convolutional neural networks (CNNs)</i> paired with microcontroller telemetry. 
                 </p>
               </div>
 
               <div className="rounded-2xl border border-neutral-200/80 dark:border-neutral-800 p-5 bg-neutral-50/50 dark:bg-neutral-900/40">
                 <h3 className="font-semibold text-base">Full-Stack Web Development</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2 leading-relaxed">
-                  Designing responsive web platforms with clean UI/UX, robust relational database architectures, and performant REST APIs.
+                  designing responsive web platforms with responsive UI/UX, structured relational database architectures, and performant REST APIs.
                 </p>
               </div>
             </div>
@@ -84,30 +89,45 @@ export default function AboutPage() {
           <section id="contact" className="scroll-mt-32 border-t border-neutral-200 dark:border-neutral-800 pt-8">
             <h2 className="text-xl font-bold mb-4 tracking-tight">Get in Touch</h2>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
-              Feel free to reach out for collaborations, project inquiries, or full-time opportunities.
+              Feel free to reach out for collaborations, project inquiries, or just connect.
             </p>
             <div className="flex flex-wrap gap-4 text-sm font-medium">
               <a
-                href="https://github.com/your-username"
+                href="https://github.com/kay-16"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline text-neutral-900 dark:text-neutral-100"
+                className="inline-flex items-center gap-1.5 text-neutral-900 hover:text-neutral-600 dark:text-neutral-100 dark:hover:text-neutral-300 transition"
               >
-                GitHub ↗
+                <span>Github</span>
+                <img 
+                  src="/github.svg" 
+                  alt="" 
+                  className="w-3.5 h-3.5 opacity-100"
+                />
               </a>
               <a
-                href="https://linkedin.com/in/your-profile"
+                href="https://www.linkedin.com/in/kyla-reambonanza-889a7135b/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline text-neutral-900 dark:text-neutral-100"
+                className="inline-flex items-center gap-1.5 text-neutral-900 hover:text-neutral-600 dark:text-neutral-100 dark:hover:text-neutral-300 transition"
               >
-                LinkedIn ↗
+                <span>LinkedIn</span>
+                <img 
+                  src="/linkedin.svg" 
+                  alt="" 
+                  className="w-3.5 h-3.5 opacity-100"
+                />
               </a>
               <a
-                href="mailto:your-email@example.com"
-                className="hover:underline text-neutral-900 dark:text-neutral-100"
+                href="mailto:kayreambonanza@gmail.com"
+                className="inline-flex items-center gap-1.5 text-neutral-900 hover:text-neutral-600 dark:text-neutral-100 dark:hover:text-neutral-300 transition"
               >
-                Email ↗
+                <span>Email</span>
+                <img 
+                  src="/gmail.svg" 
+                  alt="" 
+                  className="w-3.5 h-3.5 opacity-100"
+                />
               </a>
             </div>
           </section>
