@@ -45,10 +45,15 @@ export default async function ProjectPostPage({ params }: PageProps) {
         <div className="mb-8">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-1.5 text-xs font-mono text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition"
+            className="flex items-center gap-2 inline-flex gap-1.5 text-s font-mono text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition"
           >
-            ← Back to all projects
-          </Link>
+              <img 
+                src="/left-arrow.svg" 
+                alt=""
+                className="w-4.5 h-4.5 opacity-100 hover:text-neutral-900 dark:hover:text-white transition" 
+              />
+              <span>Back to all projects</span>
+            </Link>
         </div>
 
         {/* Header */}
