@@ -43,7 +43,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-950 dark:hover:text-white transition"
                 >
-                  Resume ↗
+                  Resume
                 </a>
               </li>
             </ul>
@@ -62,7 +62,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-950 dark:hover:text-white transition inline-flex items-center gap-1"
                 >
-                  LinkedIn ↗
+                  LinkedIn
                 </a>
               </li>
               <li>
@@ -72,7 +72,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-950 dark:hover:text-white transition inline-flex items-center gap-1"
                 >
-                  GitHub ↗
+                  GitHub
                 </a>
               </li>
               <li>
@@ -82,7 +82,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-950 dark:hover:text-white transition inline-flex items-center gap-1"
                 >
-                  Instagram ↗
+                  Instagram
                 </a>
               </li>
               <li>
@@ -92,7 +92,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-950 dark:hover:text-white transition inline-flex items-center gap-1"
                 >
-                  Spotify ↗
+                  Spotify
                 </a>
               </li>
             </ul>
