@@ -84,7 +84,11 @@ export default function Page() {
                 >
                   {/* Card Tag */}
                   <div className="flex items-center gap-2 text-xs text-neutral-600 dark:text-neutral-400 font-medium mb-4">
-                    <span>💡</span>
+                    <img 
+                      src="/lightbulb.svg" 
+                      alt=""
+                      className="w-3.5 h-3.5 opacity-100" 
+                    />
                     <span>{project.tag}</span>
                   </div>
 
