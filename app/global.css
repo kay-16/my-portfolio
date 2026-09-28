@@ -1,5 +1,29 @@
 @import 'tailwindcss';
 
+body {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+/* Pause scroll when the user hovers over an icon */
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 ::selection {
   background-color: #47a3f3;
   color: #fefefe;
