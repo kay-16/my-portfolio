@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import ProgressBar from 'app/components/progressbar'
-import TableOfContents from 'app/components/TableOfContents'
-import FadeIn from 'app/components/FadeIn'
+import ProgressBar from 'app/components/progress-bar'
+import TableOfContents from 'app/components/table-of-contents'
+import FadeIn from 'app/components/fade-in'
 import { allProjects } from 'lib/projects'
 import { LuChevronsLeft, LuExternalLink } from 'react-icons/lu'
 
