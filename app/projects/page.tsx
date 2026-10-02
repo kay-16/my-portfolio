@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { allProjects } from 'lib/projects'
 import { LuLightbulb } from 'react-icons/lu'
-import FadeIn from 'app/components/FadeIn'
+import FadeIn from 'app/components/fade-in'
 
 export const metadata = {
   title: 'Projects | Kyla',
