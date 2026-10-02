@@ -48,10 +48,10 @@ export default function TableOfContents({ sections }: { sections: SectionItem[] 
 
   return (
     <aside className="hidden lg:block w-48 sticky top-36 h-fit text-sm">
-      <p className="font-semibold text-neutral-900 dark:text-neutral-100 mb-4">
+      <p className="font-semibold text-[#8C1D24] dark:text-[#FBF6E2] mb-4">
         On this page
       </p>
-      <ul className="space-y-2 border-l border-neutral-200 dark:border-neutral-800 pl-3">
+      <ul className="space-y-2 border-l border-[#EADCB1] dark:border-[#3D2527] pl-3">
         {sections.map(({ id, label }) => {
           const isActive = activeId === id
           return (
@@ -60,8 +60,8 @@ export default function TableOfContents({ sections }: { sections: SectionItem[] 
                 href={`#${id}`}
                 className={`block transition-colors duration-150 ${
                   isActive
-                    ? 'font-bold text-neutral-950 dark:text-white -ml-[13px] pl-3 border-l-2 border-neutral-950 dark:border-white'
-                    : 'text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-200'
+                    ? 'font-bold text-[#8C1D24] dark:text-[#FFFDF5] -ml-[13px] pl-3 border-l-2 border-[#8C1D24] dark:border-[#F3E5AB]'
+                    : 'text-[#A85854] dark:text-[#D4C49E] hover:text-[#8C1D24] dark:hover:text-[#FFFDF5]'
                 }`}
               >
                 {label}
