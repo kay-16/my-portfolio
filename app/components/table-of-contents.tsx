@@ -1,0 +1,75 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+
+interface SectionItem {
+  id: string
+  label: string
+}
+
+export default function TableOfContents({ sections }: { sections: SectionItem[] }) {
+  const [activeId, setActiveId] = useState<string>('')
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id)
+          }
+        })
+      },
+      { rootMargin: '-20% 0px -70% 0px' } // Detects elements when they enter reading view
+    )
+
+    sections.forEach(({ id }) => {
+      const element = document.getElementById(id)
+      if (element) observer.observe(element)
+    })
+
+    // Bottom Scroll: checks and highlights the last section if scrolled to the end of page 
+    const handleScrollBottom = () => {
+      const isAtBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 60
+
+      if (isAtBottom && sections.length > 0) {
+        setActiveId(sections[sections.length - 1].id)
+      }
+    }
+
+    window.addEventListener('scroll', handleScrollBottom, { passive: true })
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('scroll', handleScrollBottom)
+    }
+  }, [sections])
+
+  return (
+    <aside className="hidden lg:block w-48 sticky top-36 h-fit text-sm">
+      <p className="font-semibold text-[#8C1D24] dark:text-[#FBF6E2] mb-4">
+        On this page
+      </p>
+      <ul className="space-y-2 border-l border-[#EADCB1] dark:border-[#3D2527] pl-3">
+        {sections.map(({ id, label }) => {
+          const isActive = activeId === id
+          return (
+            <li key={id}>
+              <a
+                href={`#${id}`}
+                className={`block transition-colors duration-150 ${
+                  isActive
+                    ? 'font-bold text-[#8C1D24] dark:text-[#FFFDF5] -ml-[13px] pl-3 border-l-2 border-[#8C1D24] dark:border-[#F3E5AB]'
+                    : 'text-[#A85854] dark:text-[#D4C49E] hover:text-[#8C1D24] dark:hover:text-[#FFFDF5]'
+                }`}
+              >
+                {label}
+              </a>
+            </li>
+          )
+        })}
+      </ul>
+    </aside>
+  )
+}
