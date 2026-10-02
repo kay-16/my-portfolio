@@ -1,6 +1,6 @@
-import TableOfContents from "app/components/TableOfContents"
-import ProgressBar from "app/components/progressbar"
-import FadeIn from "app/components/FadeIn"
+import TableOfContents from "app/components/table-of-contents"
+import ProgressBar from "app/components/progress-bar"
+import FadeIn from "app/components/fade-in"
 import { SiGithub, SiGmail } from "react-icons/si"
 import { LuLinkedin } from "react-icons/lu"
 
