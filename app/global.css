@@ -9,24 +9,37 @@ body {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
 
 .animate-marquee {
   display: flex;
+  flex-shrink: 0;
   width: max-content;
   animation: marquee 25s linear infinite;
 }
 
-/* Pause scroll when the user hovers over an icon */
-.animate-marquee:hover {
-  animation-play-state: paused;
+.animate-marquee-reverse {
+  display: flex;
+  flex-shrink: 0;
+  width: max-content;
+  animation: marquee-reverse 30s linear infinite;
 }
 
-::selection {
-  background-color: #47a3f3;
-  color: #fefefe;
+/* Freezes all tracks in that specific row when hovered */
+.marquee-row:hover .animate-marquee,
+.marquee-row:hover .animate-marquee-reverse {
+  animation-play-state: paused;
 }
 
 :root {
