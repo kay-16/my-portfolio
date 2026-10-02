@@ -25,9 +25,11 @@ import {
 } from 'react-icons/si'
 import { HiOutlineMail } from 'react-icons/hi'
 import { LiaLinkedin } from 'react-icons/lia'
+import { LuLightbulb } from 'react-icons/lu'
+import { LuMapPin, LuLink, LuZap, LuExternalLink } from 'react-icons/lu'
 
 export const metadata = {
-  title: 'Kyla Reambonanza | Software Engineer',
+  title: 'Kyla Reambonanza | Portfolio',
   description: 'Software Engineer and Computer Science graduate portfolio',
 }
 
@@ -81,14 +83,13 @@ const row2 = [
   { name: 'Git', icon: SiGit },
 ]
 
-
 export default function Page() {
   return (
-    <main className="relative min-h-screen bg-white text-neutral-900 overflow-hidden px-6 pt-32 pb-20">
-      {/* 1. Background Ambient Glow */}
+    <main className="relative min-h-screen bg-[#FBF6E2] dark:bg-[#1A1213] text-[#8C1D24] dark:text-[#F3E5AB] overflow-hidden px-6 pt-32 pb-20 transition-colors duration-300">
+      {/* 1. Background Ambient Glow (Tamarillo Red & Butter Yellow) */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-0 right-0 -z-10 h-96 w-full max-w-2xl bg-gradient-to-bl from-purple-200/50 via-rose-100/40 to-transparent blur-3xl opacity-70"
+        className="pointer-events-none absolute top-0 right-0 -z-10 h-96 w-full max-w-2xl bg-gradient-to-bl from-[#8C1D24]/20 via-[#F3E5AB]/40 to-transparent blur-3xl opacity-80"
       />
 
       <div className="max-w-4xl mx-auto">
@@ -96,43 +97,36 @@ export default function Page() {
         <FadeIn delay={100}>
           <section className="flex flex-col-reverse md:flex-row items-start md:items-center justify-between gap-10 pb-20">
             <div className="max-w-xl">
-              <span className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-950 dark:text-neutral-50 leading-tight">
-                  i’m{' '}
-                  <span 
-                    style={{ fontFamily: 'var(--font-cursive), cursive' }}
-                    className="font-normal text-[2em] leading-none inline-block px-1 -rotate-2 text-neutral-950 dark:text-neutral-50"
-                  >
-                    Kyla
-                  </span>
-                  , i like to create, build and some {' '}
-                  <span className="bg-gradient-to-r from-red-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
-                    cool
-                  </span>{' '}
-                  stuff
+              <span className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#8C1D24] dark:text-[#FBF6E2] leading-tight">
+                i’m{' '}
+                <span 
+                  // style={{ fontFamily: 'var(--font-cursive), cursive' }}
+                  // className="text-[2em] leading-none inline-block px-1 text-[#8C1D24] dark:text-[#F3E5AB]"
+                >
+                  Kyla
                 </span>
-              <p className="mt-4 text-xs sm:text-sm text-neutral-500 font-mono tracking-wide">
+                , i like to create & build some {' '}
+                <span className="bg-gradient-to-r from-[#8C1D24] via-[#C84A31] to-[#D9822B] bg-clip-text text-transparent">
+                  cool
+                </span>{' '}
+                stuff
+              </span>
+              <p className="mt-4 text-xs sm:text-sm text-[#A85854] dark:text-[#D4C49E] font-mono tracking-wide">
                 Philippines | UTC/GMT +8
               </p>
             </div>
 
-            {/* Profile Photo Avatar with Glow & Speech Badge */}
+            {/* Profile Photo Avatar with Glow */}
             <div className="relative group self-center md:self-auto shrink-0">
-              {/* Soft ambient background glow */}
-              <div className="absolute -inset-2 rounded-full" />
+              <div className="absolute -inset-2 rounded-full bg-[#8C1D24]/20 dark:bg-[#F3E5AB]/10 blur-xl group-hover:opacity-100 transition duration-500" />
 
-              {/* Circular Avatar Container */}
-              <div className="relative h-28 w-28 sm:h-32 sm:w-32 rounded-full overflow-hidden ring-4 ring-white dark:ring-neutral-900 shadow-xl bg-neutral-100 dark:bg-neutral-800">
+              <div className="relative h-40 w-40 sm:h-48 sm:w-48 md:h-52 md:w-52 rounded-full overflow-hidden ring-4 ring-[#EADCB1] dark:ring-[#3D2527] shadow-xl bg-[#FFFDF5] dark:bg-[#251A1B]">
                 <img
                   src="/images/portfolio_photo.jpg"
                   alt="Kyla Reambonanza"
-                  className="h-full w-full object-cover object-center grayscale contrast-105 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500 ease-out"
+                  className="h-full w-full object-cover object-center contrast-105 group-hover:scale-105 transition-all duration-500 ease-out"
                 />
               </div>
-
-              {/* Floating Speech / Greeting Pill Bubble
-              <div className="absolute -bottom-1 -right-3 sm:bottom-1 sm:-right-4 rounded-full border border-neutral-200/80 dark:border-neutral-800 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-sm px-2.5 py-1 text-[11px] font-medium text-neutral-800 dark:text-neutral-200 shadow-md flex items-center gap-1 select-none pointer-events-none transition-transform group-hover:scale-105">
-                <span>Kay!</span>
-              </div> */}
             </div>
           </section>
         </FadeIn>
@@ -140,47 +134,55 @@ export default function Page() {
         {/* 3. Selected Projects Section */}
         <section id="projects" className="pt-6">
           <FadeIn delay={100}>
-            <h2 className="text-2xl sm:text-3xl font-bold text-center tracking-tight text-neutral-950 dark:text-neutral-100 mb-10">
-              Some of my projects
+            <h2 className="text-2xl sm:text-3xl font-bold text-center tracking-tight text-[#8C1D24] dark:text-[#FBF6E2] mb-10">
+              some of my projects
             </h2>
           </FadeIn>
 
-          {/* Projects Grid with Staggered Cascading Animation */}
+          {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {allProjects.slice(0, 2).map((project, index) => (
               <FadeIn key={project.slug} delay={index * 150} className="h-full">
                 <Link
                   href={`/projects/${project.slug}`}
-                  className="group flex flex-col h-full rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900/40 p-6 shadow-[0_2px_16px_rgba(0,0,0,0.04)] hover:shadow-xl hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-300 cursor-pointer"
+                  className="group flex flex-col h-full rounded-3xl border border-[#EADCB1] dark:border-[#3D2527] bg-[#FFFDF5] dark:bg-[#221819] p-6 shadow-[0_2px_16px_rgba(140,29,36,0.04)] hover:shadow-xl hover:border-[#8C1D24]/40 dark:hover:border-[#F3E5AB]/40 transition-all duration-300 cursor-pointer"
                 >
                   {/* Card Tag */}
-                  <div className="flex items-center gap-2 text-xs text-neutral-600 dark:text-neutral-400 font-medium mb-4">
-                    <img 
-                      src="/lightbulb.svg" 
-                      alt=""
-                      className="w-3.5 h-3.5 opacity-100" 
-                    />
+                  <div className="flex items-center gap-2 text-xs text-[#A85854] dark:text-[#D4C49E] font-medium mb-4">
+                    <LuLightbulb className="w-3.5 h-3.5 shrink-0 opacity-100" />
                     <span>{project.tag}</span>
                   </div>
 
-                  {/* Black Thumbnail Box */}
-                  <div className="flex h-52 w-full items-center justify-center rounded-2xl bg-black transition-transform duration-300 group-hover:scale-[1.01]">
-                    <span className="font-mono text-neutral-500 text-xs">
-                      [ View Case Study ]
-                    </span>
+                  {/* Thumbnail Box */}
+                  <div className="relative h-52 w-full overflow-hidden rounded-2xl border border-[#E2D29E]/60 dark:border-[#2E1D1E] bg-[#F0E4BA]/50 dark:bg-[#150E0F]">
+                    {project.thumbnail ? (
+                      <img
+                        src={project.thumbnail}
+                        alt={project.title}
+                        className="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
+                      />
+                    ) : (
+                      /* Fallback if an image isn't provided */
+                      <div className="flex h-full w-full items-center justify-center">
+                        <span className="font-mono text-[#8C1D24]/70 dark:text-[#D4C49E]/70 text-xs">
+                          [ View Case Study ]
+                        </span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Card Text Content */}
                   <div className="mt-5 flex-1 flex flex-col justify-between">
                     <div>
                       <div className="flex items-center justify-between">
-                        <h3 className="text-xl font-bold text-neutral-950 dark:text-neutral-100 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">
+                        <h3 className="text-xl font-bold text-[#8C1D24] dark:text-[#FBF6E2] group-hover:text-[#B22933] dark:group-hover:text-[#FFFDF5] transition-colors">
                           {project.title}
                         </h3>
-                        <span className="text-neutral-400 group-hover:translate-x-1 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-all">
+                        <span className="text-[#A85854] group-hover:translate-x-1 group-hover:text-[#8C1D24] dark:group-hover:text-[#F3E5AB] transition-all">
+                          
                         </span>
                       </div>
-                      <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
+                      <p className="mt-1 text-sm text-[#7D4F4C] dark:text-[#D4C49E] leading-relaxed">
                         {project.description}
                       </p>
                     </div>
@@ -195,7 +197,7 @@ export default function Page() {
             <div className="mt-10 flex justify-center">
               <Link
                 href="/projects"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 shadow-sm transition"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium border border-[#EADCB1] dark:border-[#3D2527] bg-[#FFFDF5] dark:bg-[#221819] text-[#8C1D24] dark:text-[#F3E5AB] hover:bg-[#F3E5AB]/40 dark:hover:bg-[#2D1F20] hover:border-[#8C1D24]/40 dark:hover:border-[#F3E5AB]/40 shadow-xs transition"
               >
                 <span>See all my projects</span>
                 <span className="font-mono text-xs">→</span>
@@ -207,7 +209,7 @@ export default function Page() {
         {/* 4. About Me Bento Grid */}
         <section id="about" className="scroll-mt-28 mt-24">
           <FadeIn delay={100}>
-            <h2 className="text-2xl sm:text-3xl font-bold text-center tracking-tight text-neutral-950 dark:text-neutral-50 mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center tracking-tight text-[#8C1D24] dark:text-[#FBF6E2] mb-10">
               About Me
             </h2>
           </FadeIn>
@@ -216,20 +218,16 @@ export default function Page() {
 
             {/* 1. Location Card with Globe */}
             <FadeIn delay={100} className="md:col-span-2">
-              <div className="relative overflow-hidden rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900/40 p-6 flex flex-col justify-between shadow-sm min-h-[340px] h-full">
-                <div className="flex items-center gap-2 text-xs font-medium text-neutral-500">
+              <div className="relative overflow-hidden rounded-3xl border border-[#EADCB1] dark:border-[#3D2527] bg-[#FFFDF5] dark:bg-[#221819] p-6 flex flex-col justify-between shadow-xs min-h-[340px] h-full">
+                <div className="flex items-center gap-2 text-xs font-medium text-[#A85854] dark:text-[#D4C49E]">
+                  <LuMapPin className="w-3.5 h-3.5 opacity-100 shrink-0" />
                   <span>Location</span>
-                    <img 
-                      src="/map-pinned.svg" 
-                      alt="" 
-                      className="w-3.5 h-3.5 opacity-100"
-                   />
                 </div>
 
                 <div className="relative flex items-center justify-center my-auto">
                   <Globe />
-                  <div className="absolute px-3 py-1 rounded-full bg-black text-white text-xs font-semibold shadow-md flex items-center gap-1.5 z-10 pointer-events-none">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <div className="absolute px-3 py-1 rounded-full bg-[#8C1D24] text-[#FFFDF5] text-xs font-semibold shadow-md flex items-center gap-1.5 z-10 pointer-events-none">
+                    <span className="w-2 h-2 rounded-full bg-[#F3E5AB] animate-pulse" />
                     Philippines
                   </div>
                 </div>
@@ -237,96 +235,92 @@ export default function Page() {
             </FadeIn>
 
             {/* 2. Connect Card with SVG Icons */}
-          <FadeIn delay={200} className="md:col-span-1 lg:col-span-2">
-            <div className="rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900/40 p-6 shadow-xs flex flex-col justify-between h-full">
-              <div className="flex items-center gap-2 text-xs font-medium text-neutral-500 mb-4">
-                <span>Connect</span>
-                <img src="/link.svg" alt="" className="w-3.5 h-3.5 opacity-80 dark:invert" />
-              </div>
-
-              <div className="flex flex-col gap-1.5 my-auto">
-                {socials.map((social) => {
-                  const Icon = social.icon
-                  return (
-                    <a
-                      key={social.name}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex items-center justify-between p-2.5 rounded-2xl hover:bg-neutral-100 dark:hover:bg-neutral-800/70 transition-all text-sm font-medium text-neutral-700 dark:text-neutral-300"
-                    >
-                      <div className="flex items-center gap-3">
-                        <span className="text-neutral-500 group-hover:text-neutral-950 dark:group-hover:text-white transition-colors">
-                          <Icon className="w-4 h-4" />
-                        </span>
-                        <span className="group-hover:text-neutral-950 dark:group-hover:text-white transition-colors">
-                          {social.name}
-                        </span>
-                      </div>
-                      <span className="text-neutral-400 group-hover:text-neutral-950 dark:group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-xs">
-                        ↗
-                      </span>
-                    </a>
-                  )
-                })}
-              </div>
-            </div>
-          </FadeIn>
-
-          {/* 3. Tech Stacks Card (Icon Showcase like Reference) */}
-          <FadeIn delay={300} className="md:col-span-2 lg:col-span-4">
-            <div className="rounded-3xl border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-neutral-900/40 p-6 shadow-xs flex flex-col justify-between h-full overflow-hidden">
-              
-              {/* Header */}
-              <div className="flex items-center gap-2 text-xs font-medium text-neutral-500 mb-6">
-                <img src="/layers.svg" alt="" className="w-3.5 h-3.5 opacity-80 dark:invert" />
-                <span>Stacks</span>
-              </div>
-
-              {/* Marquee Container with Left & Right Gradient Blur Masks */}
-              <div className="relative w-full overflow-hidden py-2 space-y-6">
-                {/* Left Fade Mask */}
-                <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-r from-white dark:from-[#0d0d0d] to-transparent" />
-                {/* Right Fade Mask */}
-                <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-l from-white dark:from-[#0d0d0d] to-transparent" />
-
-                {/* Row 1 */}
-                <div className="animate-marquee flex gap-10 sm:gap-12 items-center">
-                  {/* Render twice for continuous loop */}
-                  {[...row1, ...row1].map((item, index) => {
-                    const Icon = item.icon
-                    return (
-                      <div
-                        key={`${item.name}-${index}`}
-                        title={item.name}
-                        className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white hover:scale-115 transition-transform duration-200 cursor-pointer shrink-0"
-                      >
-                        <Icon className="w-8 h-8 sm:w-9 sm:h-9" />
-                      </div>
-                    )
-                  })}
+            <FadeIn delay={200} className="md:col-span-1 lg:col-span-2">
+              <div className="rounded-3xl border border-[#EADCB1] dark:border-[#3D2527] bg-[#FFFDF5] dark:bg-[#221819] p-6 shadow-xs flex flex-col justify-between h-full">
+                <div className="flex items-center gap-2 text-xs font-medium text-[#A85854] dark:text-[#D4C49E] mb-4">
+                  <LuLink className="w-3.5 h-3.5 opacity-100 shrink-0" />
+                  <span>Connect</span>
                 </div>
 
-                {/* Row 2 */}
-                <div className="animate-marquee flex gap-10 sm:gap-12 items-center" style={{ animationDuration: '30s' }}>
-                  {/* Render twice for continuous loop */}
-                  {[...row2, ...row2].map((item, index) => {
-                    const Icon = item.icon
+                <div className="flex flex-col gap-1.5 my-auto">
+                  {socials.map((social) => {
+                    const Icon = social.icon
                     return (
-                      <div
-                        key={`${item.name}-${index}`}
-                        title={item.name}
-                        className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white hover:scale-115 transition-transform duration-200 cursor-pointer shrink-0"
+                      <a
+                        key={social.name}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center justify-between p-2.5 rounded-2xl hover:bg-[#F5EBC4]/50 dark:hover:bg-[#2D1F20] transition-all text-sm font-medium text-[#8C1D24] dark:text-[#F3E5AB]"
                       >
-                        <Icon className="w-8 h-8 sm:w-9 sm:h-9" />
-                      </div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-[#A85854] group-hover:text-[#8C1D24] dark:group-hover:text-[#FFFDF5] transition-colors">
+                            <Icon className="w-4 h-4" />
+                          </span>
+                          <span className="group-hover:text-[#8C1D24] dark:group-hover:text-[#FFFDF5] transition-colors">
+                            {social.name}
+                          </span>
+                        </div>
+                        <span className="text-[#A85854] group-hover:text-[#8C1D24] dark:group-hover:text-[#FFFDF5] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-xs">
+                          ↗
+                        </span>
+                      </a>
                     )
                   })}
                 </div>
               </div>
+            </FadeIn>
 
-            </div>
-          </FadeIn>
+            {/* 3. Tech Stacks Card with Infinite Marquee */}
+            <FadeIn delay={300} className="md:col-span-2 lg:col-span-4">
+              <div className="rounded-3xl border border-[#EADCB1] dark:border-[#3D2527] bg-[#FFFDF5] dark:bg-[#221819] p-6 shadow-xs flex flex-col justify-between h-full overflow-hidden">
+                
+                {/* Header */}
+                <div className="flex items-center gap-2 text-xs font-medium text-[#A85854] dark:text-[#D4C49E] mb-6">
+                  <LuZap className="w-3.5 h-3.5 opacity-100 shrink-0" />
+                  <span>Stacks</span>
+                </div>
+
+                {/* Marquee Container with Masking aligned to card surface */}
+                <div className="relative w-full overflow-hidden py-2 space-y-6">
+                <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-r from-[#FFFDF5] dark:from-[#221819] to-transparent" />
+                <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-l from-[#FFFDF5] dark:from-[#221819] to-transparent" />
+
+                  {/* Row 1 */}
+                  <div className="animate-marquee flex gap-10 sm:gap-12 items-center">
+                    {[...row1, ...row1].map((item, index) => {
+                      const Icon = item.icon
+                      return (
+                        <div
+                          key={`${item.name}-${index}`}
+                          title={item.name}
+                          className="text-[#8C1D24]/85 dark:text-[#F3E5AB]/85 hover:text-[#8C1D24] dark:hover:text-[#FFFDF5] hover:scale-115 transition-transform duration-200 cursor-pointer shrink-0"
+                        >
+                          <Icon className="w-8 h-8 sm:w-9 sm:h-9" />
+                        </div>
+                      )
+                    })}
+                  </div>
+
+                  {/* Row 2 */}
+                  <div className="animate-marquee flex gap-10 sm:gap-12 items-center" style={{ animationDuration: '30s' }}>
+                    {[...row2, ...row2].map((item, index) => {
+                      const Icon = item.icon
+                      return (
+                        <div
+                          key={`${item.name}-${index}`}
+                          title={item.name}
+                          className="text-[#8C1D24]/85 dark:text-[#F3E5AB]/85 hover:text-[#8C1D24] dark:hover:text-[#FFFDF5] hover:scale-115 transition-transform duration-200 cursor-pointer shrink-0"
+                        >
+                          <Icon className="w-8 h-8 sm:w-9 sm:h-9" />
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+
+              </div>
+            </FadeIn>
           </div>
 
           {/* Download CV CTA */}
@@ -336,14 +330,10 @@ export default function Page() {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-6 py-2.5 rounded-full text-xs font-medium border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition shadow-sm inline-flex items-center gap-1.5"
+                className="inline-flex items-center gap-1.5 px-6 py-2.5 rounded-full text-xs font-medium border border-[#EADCB1] dark:border-[#3D2527] bg-[#FFFDF5] dark:bg-[#221819] text-[#8C1D24] dark:text-[#F3E5AB] hover:bg-[#F3E5AB]/40 dark:hover:bg-[#2D1F20] transition shadow-xs"
               >
                 <span>Download Full CV</span>
-                <img 
-                  src="/external-link.svg" 
-                  alt="" 
-                  className="w-3.5 h-3.5 opacity-100"
-                />
+                <LuExternalLink className="w-3 h-3 shrink-0"/>
               </a>
             </div>
           </FadeIn>
