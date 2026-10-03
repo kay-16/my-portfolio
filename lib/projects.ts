@@ -65,7 +65,6 @@ export const allProjects: ProjectItem[] = [
     highlights: [
       'Annotated and augmented a robust dataset addressing occlusions and overlapping wires.',
       'Implemented real-time mask inference for hazard prioritization.',
-      'Built a lightweight reporting dashboard for easier maintenance.',
     ],
   },
   {
@@ -89,9 +88,9 @@ export const allProjects: ProjectItem[] = [
     githubUrl: 'https://github.com/kay-16/Egg-Shell-Crack-Detection-Web-App.git',
     doiUrl: '/paper/Detecting_Cracks_in_Chicken_Eggs_using_Log_Mel_Spectrograms_and_CNN.pdf',
     highlights: [
-      'Engineered signal preprocessing pipeline converting raw audio vibrations to Log-Mel spectrograms.',
-      'Trained a custom lightweight CNN reaching high classification accuracy across test batches.',
-      'Designed an edge-computing prototype for real-time inference telemetry.',
+      'Turned raw sound vibrations into clear audio visual charts (spectrograms).',
+      'Trained a lightweight AI model that spots cracked eggs with high accuracy.',
+      'Built a small real-time system that tests and checks eggs instantly on the spot.',
     ],
   },
   {
@@ -113,9 +112,8 @@ export const allProjects: ProjectItem[] = [
     stack: ['Laravel', 'PHP', 'Blade'],
     githubUrl: 'https://github.com/kay-16/art_webapp.git',
     highlights: [
-      'Annotated and augmented a robust dataset addressing occlusions and overlapping wires.',
-      'Implemented real-time bounding box and mask inference for hazard prioritization.',
-      'Built a lightweight reporting dashboard for municipal maintenance crews.',
+      'Lets artists log in and manage their own galleries.',
+      'Uses cloud image hosting for fast loading and crisp visuals.',
     ],
   },
 ]
