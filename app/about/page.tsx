@@ -33,7 +33,7 @@ export default function AboutPage() {
                 About Me
               </h1>
               <p className="text-[#A85854] dark:text-[#D4C49E] font-mono text-sm">
-                Philippines • UTC/GMT +8
+                Philippines | UTC/GMT +8
               </p>
             </header>
           </FadeIn>
@@ -42,13 +42,18 @@ export default function AboutPage() {
           <FadeIn delay={150}>
             <section id="bio" className="scroll-mt-32 space-y-4 text-[#7D4F4C] dark:text-[#D4C49E] leading-relaxed text-base mb-12">
               <p>
-                Hi! I’m Kyla (or Kay for short). I recently graduated with a degree in Computer Science. And now I've been focusing on machine learning, 
+                Hi! I’m <b>Kyla</b> (<i>Kay for short</i>). I recently graduated with a degree in <b>Computer Science</b>. And now I've been focusing on machine learning, 
                 deep learning, and dabbling in full-stack development and research on the side. Also, been getting into UI/UX design because I get to express my
                 love for art here. 
               </p>
               <p>
                 My work spans building end-to-end applications with modern frontend frameworks as well as researching niche subjects where I can 
-                apply computer vision systems and solve problems—even the most trivial (for a lack of better word xd) inconvenience I encounter on the daily.
+                apply computer vision systems and solve problems—even the most trivial (<i>for a lack of better word xd</i>) inconvenience I encounter on the daily.
+              </p>
+              <p>
+                I'm also currently learning Chinese! I'm on Novice 2 and I strive to improve every day by attending classes thrice a week and do some quick flashcards. 
+                So aside from English, Tagalog & Cebuano (<i>my mother tongue</i>), you could
+                fairly say I can speak 4 languages haha!
               </p>
             </section>
           </FadeIn>
