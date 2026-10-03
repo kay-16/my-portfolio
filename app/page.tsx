@@ -431,7 +431,7 @@ export default function Page() {
                 {/* Pill Button */}
                 <div className="mt-4">
                   <a
-                    href="/reambonanza_cv_latest.pdf"
+                    href="/reambonanza_cv.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-xs font-semibold border border-[#EADCB1] dark:border-[#3D2527] bg-[#FFFDF5] dark:bg-[#221819] text-[#8C1D24] dark:text-[#F3E5AB] hover:bg-[#F3E5AB]/50 dark:hover:bg-[#2D1F20] hover:border-[#8C1D24]/40 dark:hover:border-[#F3E5AB]/40 shadow-xs transition-all duration-200"
