@@ -108,6 +108,7 @@ kyla-project-portfolio/
 │   │   └── route.tsx
 │   ├── projects/          # Projects dynamic route & MDX posts
 │   │   ├── [slug]/
+              └── page.tsx
 │   │   ├── posts/
 │   │   └── page.tsx
 │   ├── global.css         # Global styles & Tailwind directives
