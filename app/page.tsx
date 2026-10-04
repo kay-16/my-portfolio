@@ -95,9 +95,9 @@ export default function Page() {
               <span className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#8C1D24] dark:text-[#FBF6E2] leading-tight">
                 i’m{' '}
                 <span>
-                  Kyla!
+                  Kyla!  
                 </span>
-                 i strive to build & create while{' '}
+                   i strive to build & create while{' '}
                 <span className="bg-gradient-to-r from-[#8C1D24] via-[#C84A31] to-[#D9822B] bg-clip-text text-transparent">
                   learning
                 </span>{' '}
