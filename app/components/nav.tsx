@@ -14,13 +14,10 @@ export function Navbar() {
             className="flex items-center gap-2 font-bold text-[#8C1D24] dark:text-[#FBF6E2] hover:opacity-85 transition"
           >
             {/* Small circular mark / initial */}
-            {/* <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#8C1D24] dark:bg-[#F3E5AB] text-xs text-[#FFFDF5] dark:text-[#1A1213] font-mono font-bold shadow-xs">
-              K
-            </span> */}
             <span className="tracking-tight text-sm font-semibold">Home</span>
           </Link>
 
-          <nav className="hidden sm:flex items-center gap-6 text-sm text-[#7D4F4C] dark:text-[#D4C49E] font-medium">
+          <nav className="hidden items-center gap-3 sm:gap-6 text-sm sm:text-sm text-[#7D4F4C] dark:text-[#D4C49E] font-medium">
             <Link
               href="/projects"
               className="hover:text-[#8C1D24] dark:hover:text-[#FFFDF5] transition"
