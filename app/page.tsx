@@ -96,7 +96,7 @@ export default function Page() {
                 i’m{' '}
                 <span>
                   Kyla!  
-                </span>
+                </span>{' '}
                    i strive to build & create while{' '}
                 <span className="bg-gradient-to-r from-[#8C1D24] via-[#C84A31] to-[#D9822B] bg-clip-text text-transparent">
                   learning
