@@ -17,7 +17,7 @@ export function Navbar() {
             <span className="tracking-tight text-sm font-semibold">Home</span>
           </Link>
 
-          <nav className="hidden items-center gap-3 sm:gap-6 text-sm sm:text-sm text-[#7D4F4C] dark:text-[#D4C49E] font-medium">
+          <nav className="flex items-center gap-3 sm:gap-6 text-sm sm:text-sm text-[#7D4F4C] dark:text-[#D4C49E] font-medium">
             <Link
               href="/projects"
               className="hover:text-[#8C1D24] dark:hover:text-[#FFFDF5] transition"
