@@ -86,7 +86,7 @@ export const allProjects: ProjectItem[] = [
     ],
     stack: ['Python', 'PyTorch', 'Streamlit', 'Librosa', 'OpenCV'],
     githubUrl: 'https://github.com/kay-16/Egg-Shell-Crack-Detection-Web-App.git',
-    doiUrl: '/paper/Detecting_Cracks_in_Chicken_Eggs_using_Log_Mel_Spectrograms_and_CNN.pdf',
+    // doiUrl: '/paper/Detecting_Cracks_in_Chicken_Eggs_using_Log_Mel_Spectrograms_and_CNN.pdf',
     highlights: [
       'Turned raw sound vibrations into clear audio visual charts (spectrograms).',
       'Trained a lightweight AI model that spots cracked eggs with high accuracy.',
