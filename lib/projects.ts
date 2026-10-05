@@ -103,7 +103,7 @@ export const allProjects: ProjectItem[] = [
     overview: [
     'I first thought of this project during my internship at Dotted Studios. At that time, I was only starting Laravel and I was in the search for ideas. ',
     'Something that isnt too "techy", (the irony lol). Something that I can pour my passion for art into. So when I got back home, I was scrolling through my Instagram feed and I thought, artists also deserve a dedicated space to present their work without the visual clutter and algorithmic noise of social media. ', 
-    'With this idea in mind, it took only for my artistic side to be pique. Soo...Artfolio was born! ',
+    'With this idea in mind, it took only for my artistic side to be piqued. Soo...Artfolio was born! ',
     'This project serves as a personal gallery with artists in mind, where they can upload high-resolution artwork, categorize pieces into curated collections, and manage their portfolio effortlessly. ',
     'On the technical side, the application connects a clean, modern frontend with a solid full-stack backend. It handles secure user authentication, responsive gallery layouts, and direct cloud media hosting to ensure artwork loads crisply and quickly across devices. ',
     'This project served as a playground for blending design with engineering, focusing on intuitive UI/UX, seamless database architecture, and giving visual art the spotlight it deserves.',
