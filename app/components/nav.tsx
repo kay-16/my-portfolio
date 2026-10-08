@@ -37,7 +37,7 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           {/* Resume Link */}
           <a
-            href="/reambonanza_cv.pdf"
+            href="/Reambonanza_Kyla_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs sm:text-sm font-medium text-[#7D4F4C] dark:text-[#D4C49E] hover:text-[#8C1D24] dark:hover:text-[#FFFDF5] px-2.5 py-1 rounded-lg hover:bg-[#F5EBC4]/50 dark:hover:bg-[#2D1F20] transition"
