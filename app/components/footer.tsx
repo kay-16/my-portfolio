@@ -38,7 +38,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/resume.pdf"
+                  href="/Reambonanza_Kyla_CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#7D4F4C] dark:text-[#D4C49E] hover:text-[#8C1D24] dark:hover:text-[#FFFDF5] transition"
