@@ -122,7 +122,7 @@ kyla-project-portfolio/
 │   └── projects.ts        # Project metadata records
 ├── public/                # Static assets served from root
 │   ├── images/            # Graphics and project screenshots
-│   └── reambonanza_cv.pdf # Downloadable resume PDF
+│   └── Reambonanza_Kyla_CV.pdf # Downloadable resume PDF
 ├── .gitignore
 ├── next-env.d.ts
 ├── package-lock.json
